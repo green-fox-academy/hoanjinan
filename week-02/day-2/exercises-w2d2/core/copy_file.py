@@ -6,7 +6,7 @@ def copy_file(old_path, new_path):
     try:
         f_read = open(old_path)
         content = f_read.readlines()
-        f_write = open(new_path, "a+")
+        f_write = open(new_path, "w+")
         for i in content:
             f_write.write(i)
         f_read.close()
