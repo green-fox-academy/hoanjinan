@@ -8,7 +8,7 @@ length = int(input("Please input the length: "))
 width = int(input("Please input the width: "))
 height = int(input("Please input the height: "))
 
-area = length * width + length * height + width * height
+area = (length * width + length * height + width * height) * 2
 vol = length * width * height
 
 print(f"The area is: {area}\nThe volume is: {vol}")
