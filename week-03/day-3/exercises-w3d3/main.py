@@ -2,9 +2,9 @@ from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
-# @app.route("/")
-# def hello_world():
-#     return f"Hello World"
+@app.route("/exercise/")
+def exercise():
+    return render_template("exercise-05.html")
 
 @app.route("/")
 def hello_name():
