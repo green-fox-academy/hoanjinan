@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-import os
+import os, csv
 
 app = Flask(__name__)
 
@@ -22,8 +22,11 @@ def read():
     heading = f.readline()
     content = f.readlines()
     f.close()
-    return render_template("film.html", title = title, heading = heading, content = content[1:])
+    return render_template("film.html", title = title, heading = heading, content = content[0])
 
+# @app.route("/query/")
+# def query():
+    
 
 if __name__ == "__main__":
     app.run()
