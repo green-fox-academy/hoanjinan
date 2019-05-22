@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect, url_for
 import os, csv
 
 app = Flask(__name__)
@@ -54,6 +54,55 @@ def query():
     else:
         result = dic[item_name]
         return render_template("query.html", price = f"The price is: {result[0]}", qty = f"The quantity is: {result[1]}")
+
+@app.route("/signup/")
+def signup():
+    username = request.args.get('username')
+    password = request.args.get('password')
+
+    f = open("/Users/hoanjinan_otoko/Desktop/epam-ds-training/greenfox/hoanjinan/week-03/day-3/exercises-w3d3/users.txt", "r")
+    content = f.read().splitlines()
+    if username in content:
+        f.close()
+        exist = "The user is already registered!"
+        return render_template("signup.html", exist = exist)
+    elif username == None or username == "" or password == "":
+        remind = "Please enter all required fields!"
+        return render_template("signup.html", remind = remind)
+    else:
+        f.close()
+        f = open("/Users/hoanjinan_otoko/Desktop/epam-ds-training/greenfox/hoanjinan/week-03/day-3/exercises-w3d3/users.txt", "a+")
+        f.writelines(f"{username}\n{password}\n")
+        f.close()
+        done = f"You have successfully registered as: {username}"
+        return render_template("signup.html", done = done)
+
+@app.route("/login/")
+def login():
+    username = request.args.get('username')
+    password = request.args.get('password')
+
+    f = open("/Users/hoanjinan_otoko/Desktop/epam-ds-training/greenfox/hoanjinan/week-03/day-3/exercises-w3d3/users.txt", "r")
+    content = f.read().splitlines()
+    if username in content and password in content:
+        f.close()
+        # success = "Login successfully"
+        # return render_template("welcome.html", success = success)
+        return redirect(url_for("welcome", username = username))
+    elif username == None or username == "" or password == "":
+        remind = "Please enter all required fields!"
+        return render_template("login.html", remind = remind)
+    else:
+        incorrect = "You have entered incorrect username or password!"
+        return render_template("login.html", incorrect = incorrect)
+
+    # return render_template("login.html")
+
+@app.route("/welcome/<username>")
+def welcome(username):
+    return render_template("welcome.html", username = username)
+
+
 
 if __name__ == "__main__":
     app.run()
