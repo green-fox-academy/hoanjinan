@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>films</title>
+    </head>
+    <body>
+        {% for i in range(content|length)%}
+            <a href="/edit-movie/{{ i + 1 }}"><h1>{{ content [i]["title"] }} ({{ content [i]["year"] }}) - {{ content [i]["genre"] }}</h1></a>
+            <p>{{ content [i]["description"] }}</p>
+        {% endfor %}
+    </body>
+</html>
