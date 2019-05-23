@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "title": "Harry Potter and the Philosopher's Stone",
+        "year": "2001",
+        "genre": "Fantasy",
+        "description": "Harry Potter and the Philosopher's Stone (released in the United States, India and Pakistan as Harry Potter and the Sorcerer's Stone)[6] is a 2001 fantasy film directed by Chris Columbus and distributed by Warner Bros. Pictures.[5] It is based on J. K. Rowling's 1997 novel of the same name. The film is the first instalment of the Harry Potter film series and was written by Steve Kloves and produced by David Heyman. Its story follows Harry Potter's first year at Hogwarts School of Witchcraft and Wizardry as he discovers that he is a famous wizard and begins his education. The film stars Daniel Radcliffe as Harry Potter, with Rupert Grint as Ron Weasley, and Emma Watson as Hermione Granger."
+    },
+    {
+    	"id": 2,
+        "title": "Harry Potter and the Chamber of Secrets",
+        "year": "2002",
+        "genre": "Fantasy",
+        "description": "Harry Potter and the Chamber of Secrets is a 2002 fantasy film directed by Chris Columbus and distributed by Warner Bros. Pictures.[3] It is based on J. K. Rowling's 1998 novel of the same name. The film is a sequel to the 2001 film Harry Potter and the Philosopher's Stone and the second instalment in the Harry Potter film series. It was written by Steve Kloves and produced by David Heyman."
+    },
+    {
+    	"id": 3,
+        "title": "Harry Potter and the Prisoner of Azkaban",
+        "year": "2004",
+        "genre": "Fantasy",
+        "description": "Harry Potter and the Prisoner of Azkaban is a 2004 fantasy film directed by Alfonso Cuarón and distributed by Warner Bros. Pictures.[4] It is based on J. K. Rowling's 1999 novel of the same name. The film, which is the third instalment in the Harry Potter film series, was written by Steve Kloves and produced by Chris Columbus, David Heyman, and Mark Radcliffe. The story follows Harry Potter's third year at Hogwarts as he is informed that a prisoner named Sirius Black has escaped from Azkaban intending to kill him."
+    },
+    {
+    	"id": 4,
+        "title": "Harry Potter and the Goblet of Fire",
+        "year": "2005",
+        "genre": "Fantasy",
+        "description": "Harry Potter and the Goblet of Fire is a 2005 fantasy film directed by Mike Newell and distributed by Warner Bros. Pictures.[4] It is based on J. K. Rowling's 2000 novel of the same name. The film, which is the fourth instalment in the Harry Potter film series, was written by Steve Kloves and produced by David Heyman. The story follows Harry's fourth year at Hogwarts as he is chosen by the Goblet of Fire to compete in the Triwizard Tournament."
+    },
+    {
+    	"id": 5,
+        "title": "Harry Potter and the Order of the Phoenix",
+        "year": "2007",
+        "genre": "Fantasy",
+        "description": "Harry Potter and the Order of the Phoenix is a 2007 fantasy film directed by David Yates and distributed by Warner Bros. Pictures.[4] It is based on J. K. Rowling's 2003 novel of the same name. The fifth instalment in the Harry Potter film series, it was written by Michael Goldenberg (making this the only film in the series not to be scripted by Steve Kloves) and produced by David Heyman and David Barron. The story follows Harry Potter's fifth year at Hogwarts School of Witchcraft and Wizardry as the Ministry of Magic is in denial of Lord Voldemort's return."
+    }
+]
