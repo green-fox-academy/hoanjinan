@@ -7,5 +7,5 @@ count = 1
 for i in content:
     content_dic[count] = {"id": i["id"], "title": i["title"], "year": i["year"], "genre": i["genre"], "description": i["description"]}
     count += 1
-
+f.close()
 print(content_dic)
