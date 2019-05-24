@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Products</title>
+    </head>
+        <body>
+        <h1>Posts</h1>
+        {% for i in posts%}
+            <article>
+                <h1>{{ i["name"] }}#{{ i["post_id"] }}</h1>
+                <p>{{ i["post_content"] }}</p>
+                {% if not i["who_liked"] %}
+                    
+                {% else %}
+                    <p>Liked by 
+                        {% for j in range(i["who_liked"] | length) %}
+                            {% if i["who_liked"].index(i["who_liked"][j]) == i["who_liked"] | length - 1 %}
+                                {{i["who_liked"][j]}}
+                            {% else %}
+                                {{i["who_liked"][j]}}, 
+                            {% endif %}
+                        {% endfor %}
+                    </p>
+                {% endif %}
+            </article>
+        {% endfor %}
+       
+    </body>
+</html>
