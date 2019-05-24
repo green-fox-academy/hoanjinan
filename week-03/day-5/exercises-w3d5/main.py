@@ -101,5 +101,9 @@ def posts():
     
     return render_template("posts.html", posts = transformed_posts)
 
+@app.route("/")
+def navigation():
+    return render_template("navigation.html")
+
 if __name__ == "__main__":
     app.run()

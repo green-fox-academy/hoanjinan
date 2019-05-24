@@ -1,28 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Articles</title>
-    </head>
-    <body>
-        {% for i in range(articles | length) %}
+{% extends "navigation.html" %}
+
+{% block title %}
+    <title>Articles</title>
+{% endblock %}
+
+{% block content %}
+    {% for i in range(articles | length) %}
+        <p>
+            {{ articles[i]["content"] | truncate(225) }}
+        </p>
+        {% if not articles[i]["seen"] %}
+            <p>No one has seen this article before.</p>
+        {% else %}
             <p>
-                {{ articles[i]["content"] | truncate(225) }}
+                Seen by 
+                {% for j in range(articles[i]["seen"] | length) %}
+                    {% if j == articles[i]["seen"] | length - 1 and articles[i]["seen"] | length > 1 %}
+                        and {{ articles[i]["seen"][j] }}
+                    {% else %}
+                        {{ articles[i]["seen"][j] }}, 
+                    {% endif %}
+                {% endfor %}
             </p>
-            {% if not articles[i]["seen"] %}
-                <p>No one has seen this article before.</p>
-            {% else %}
-                <p>
-                    Seen by 
-                    {% for j in range(articles[i]["seen"] | length) %}
-                        {% if j == articles[i]["seen"] | length - 1 and articles[i]["seen"] | length > 1 %}
-                            and {{ articles[i]["seen"][j] }}
-                        {% else %}
-                            {{ articles[i]["seen"][j] }}, 
-                        {% endif %}
-                    {% endfor %}
-                </p>
-            {% endif %}
-        {% endfor %}
-    </body>
-</html>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
