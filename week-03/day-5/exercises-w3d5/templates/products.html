@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Products</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>#</th>
+                <th>Product</th>
+                <th>Price</th>
+            </tr>
+            {% for i in range(products | length) %}
+                <tr>
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ products[i][0] }}</td>
+                    <td>{{ products[i][1] | round(2, "floor") }} ¥</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
