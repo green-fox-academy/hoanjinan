@@ -28,10 +28,10 @@ cursor = connection.cursor()
 # Check and verify
 # print(cursor.mogrify(select_query, (name, class_name)))
 
-cursor.execute(insert_query, {
+cursor.execute(insert_query, [{
     "name": insert_name,
     "class_name": insert_class_name
-    })
+    }])
 
 # Tell database you have done and commit the action to the database otherwise the data will be lost
 connection.commit()
