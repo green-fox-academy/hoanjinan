@@ -1,0 +1,36 @@
+{% extends "navigation.html" %}
+
+{% block title %}
+    <title>Zoopia</title>
+{% endblock %}
+
+{% block content %}
+    <form action="/zoopia">
+        <fieldset>
+            <legend>Property Information:</legend>
+            New Home?<br>
+            <input type="radio" name="new_home" value="1" checked> Yes<br>
+            <input type="radio" name="new_home" value="0"> No<br><br>
+
+            Number of Receptions:<br>
+            <input type="text" name="num_recepts"><br><br>
+
+            Number of Floors:<br>
+            <input type="text" name="num_floors"><br><br>
+
+            Number of Bedrooms:<br>
+            <input type="text" name="num_bedroomss"><br><br>
+
+            Number of Bathrooms:<br>
+            <input type="text" name="num_bathrooms"><br><br>
+
+            Property Type:
+            <select>
+                {% for i in {{ property_type }} %}
+                    <option value={{ i }}>{{ i }}</option>
+                {% endfor %}
+            </select><br><br>
+            <input type="submit"><br>
+        </fieldset>
+    </form>
+{% endblock %}
